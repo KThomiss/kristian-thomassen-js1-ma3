@@ -17,12 +17,18 @@ async function getGames() {
         const response = await fetch(proxy);
         const results = await response.json();
 
+        console.log(results);
+
+        //const games = results.name;
+
+        //resultsContainer.innerHTML = "";
+
         for (let i = 0; i < results.length; i++) {
             console.log(results[i].name);
 
-            resultsContainer.innerHTML += `<div class="result">${results[i].name}</div>`
+            resultsContainer.innerHTML += `<div class="result">${results[i].name}</div>`;
         }
-        console.log(results);
+        //console.log(results[i].name);
 
     } catch (error) {
         console.log("an error occurred");
@@ -32,4 +38,5 @@ async function getGames() {
 getGames();
 
 // Working on getting the array to be displayed on the page
-// What is the property of the array? 
+// What is the property of the array?
+// Component script for default function to handle array list?
