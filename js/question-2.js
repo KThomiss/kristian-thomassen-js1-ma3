@@ -31,3 +31,5 @@ async function getGames() {
 }
 getGames();
 
+// Working on getting the array to be displayed on the page
+// What is the property of the array? 
