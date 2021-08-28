@@ -11,22 +11,12 @@ h1 {
   text-align: center;
 }
 
-.tags {
-  background-color: white;
-  border: none;
-}
-
 p {
   font-size: 20px;
   font-weight: bold;
-  background-color: darkgrey;
-  border: 1px solid black;
 }
 
 .result {
-  min-width: 80%;
-  display: grid;
-  grid-row: 20% 20% 20% 20% 20% 20% 20% 20% 20%;
-  grid-template-columns: 40% 40% 40%;
-  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
 }
