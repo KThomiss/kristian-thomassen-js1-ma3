@@ -4,10 +4,6 @@ const corsUrl = "https://noroffcors.herokuapp.com/";
 
 const proxy = corsUrl + apiUrl;
 
-/*const options = { "headers": {
-    "x-rapidapi-key": "20322fc9f1d848dcb8c05015fd877883",
-}};*/
-
 const nameContainer = document.querySelector(".name");
 const ratingContainer = document.querySelector(".rating");
 const tagsContainer = document.querySelector(".tags");
@@ -38,11 +34,10 @@ async function getGames() {
             ratingContainer.innerHTML += `<div class="rating">${facts[i].rating}</div>`;
             tagsContainer.innerHTML += `<div class="tags">${facts[i].tags.length}</div>`;
         }
+        
     } catch (error) {
         console.log("an error occurred");
-        errorContainer.innerHTML = apiError("An error occurred when calling the API, check your code");
-    } finally {
-        console.log("Everything is OK");
+        errorContainer.innerHTML = apiError("An error occurred when calling the API");
     }
 }
 getGames();
